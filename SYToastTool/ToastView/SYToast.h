@@ -35,7 +35,7 @@
 @property (nonatomic, strong) UIColor *toastTextColor;
 
 /**
- 文字字体（默认系统字体，字号17）
+ 文字字体（默认系统字体，字号16）
  */
 @property (nonatomic, strong) UIFont *toastTextFont;
 

@@ -41,9 +41,9 @@ static SYToast *shared = nil;
 {
     if (self = [super init]) {
         self.backgroundColor = [UIColor clearColor];
-        self.foregroundColor = [UIColor colorWithRed:49.f/255.f green:49.f/255.f blue:49.f/255.f alpha:0.6f];
+        self.foregroundColor = [UIColor colorWithRed:49.f/255.f green:49.f/255.f blue:49.f/255.f alpha:0.8f];
         self.toastTextColor = [UIColor whiteColor];
-        self.toastTextFont = [UIFont systemFontOfSize:17];
+        self.toastTextFont = [UIFont systemFontOfSize:16];
         self.toastImage = [UIImage imageNamed:@"recognize_circle_around_line"];
         self.successImage = [UIImage imageNamed:@"success"];
         self.failureImage = [UIImage imageNamed:@"error"];
@@ -118,8 +118,8 @@ static SYToast *shared = nil;
     
     [self.backgroundView addSubview:self.toastView];
     
-    CGFloat width = self.backgroundView.bounds.size.width-200;
-    self.toastView.frame = CGRectMake(0, 0, width, width/3.f*2.f);
+    CGFloat width = self.backgroundView.bounds.size.width-250;
+    self.toastView.frame = CGRectMake(0, 0, width, width/5.f*4.f);
     self.toastView.center = CGPointMake(self.backgroundView.bounds.size.width/2.f, self.backgroundView.bounds.size.height/2.f);
 }
 
@@ -170,8 +170,7 @@ static SYToast *shared = nil;
         [self.imageView setImage:image];
         self.imageView.frame = CGRectMake(10, 10, CGRectGetWidth(self.toastView.bounds)-20, CGRectGetMidY(self.label.frame)-20);
     }else{
-        CGFloat width = self.backgroundView.bounds.size.width-200;
-        self.toastView.frame = CGRectMake(0, 0, width, CGRectGetHeight(self.label.bounds)+10);
+        self.toastView.frame = CGRectMake(0, 0, CGRectGetWidth(self.toastView.bounds), CGRectGetHeight(self.label.bounds)+10);
         self.toastView.center = CGPointMake(self.backgroundView.bounds.size.width/2.f, self.backgroundView.bounds.size.height/2.f);
         
         CGRect frame = self.label.frame;

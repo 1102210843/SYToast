@@ -32,8 +32,9 @@
 - (void)onButtonClick
 {
 //    [[SYToast manager]show];
-//    [[SYToast manager]successWithText:@"成功"];
-    [[SYToast manager]successWithImage:nil text:@"下载成功"];
+//    [[SYToast manager]showWithText:@"加载中..."];
+    [[SYToast manager]successWithText:@"成功"];
+//    [[SYToast manager]successWithImage:nil text:@"下载成功"];
 //    [[SYToast manager]failureWithText:@"失败"];
 }
 
